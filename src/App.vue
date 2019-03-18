@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div 
+      v-for="(product, index) in config"
+      :key="index">
+      <ProductCard
+        :productName="product.name"
+        :productCategory="product.categoryID"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import mockConfig from './mock.js';
+import ProductCard from './components/ProductCard.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
+    ProductCard
+  },
+  data() { 
+    return {
+      config: mockConfig.products,
+    };
+  },
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
