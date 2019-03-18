@@ -12,7 +12,6 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import mockConfig from './mock.js';
 import ProductCard from './components/ProductCard.vue';
 
