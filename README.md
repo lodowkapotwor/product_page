@@ -1,4 +1,4 @@
-Which components should this page consist of?
+### Which components should this page consist of?
 Navigation bar:
   - MobileMenu
   - GoToHomepageButton
@@ -40,16 +40,18 @@ Footer:
   - FooterLinksList
   - FooterSocialContainer
 
-How to maintain the core/theme separation? 
+
+### How to maintain the core/theme separation? 
 Project should contain 2 main separated sections for components. Core and CustomComponents.
 Core can be created for each project or injected as library/framework. 
 
-Core:
+#### Core:
   - Whole logic responsible for fetching data, filtering and validation. Also routing, tracking and data storage.
   - Second part of core should contain more project/framework-related functionality like for eg. for e-commerce. There would be components like AddToCart, ProductItem, CarouselContainer etc.
 
-CustomComponents:
+#### CustomComponents:
   - In vue we can extend core components using mixins, each one or create library. Custom components like eg. ProductShowroom needs to use carousel but always with different styles, content. We can create html markup and styles inside of ProductShowrom, here we can also set which data should be passed into carousel. We will inherit main functionality like slides movement, next/back arrows. 
+
 
 
 
@@ -63,12 +65,8 @@ App.vue can be a main component like ProductPage. It will contain layout, order 
 
 
 
-## Project setup
+### Project setup
 ```
 yarn install
-```
-
-### Compiles and hot-reloads for development
-```
 yarn run serve
 ```
